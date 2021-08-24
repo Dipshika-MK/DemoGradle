@@ -1,0 +1,35 @@
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework:spring-context:5.3.9')
+    compile('org.springframework:spring-webmvc:5.3.9')
+    compile('org.aspectj:aspectjrt:1.9.7')
+    compile('mysql:mysql-connector-java:8.0.25')
+    compile('org.hibernate:hibernate-core:6.0.0.Alpha9')
+    compile('org.springframework:spring-jdbc:5.3.9')
+    compile('org.springframework:spring-orm:5.3.9')
+    compile("javax.inject:javax.inject:1")
+    compile("javax.servlet:servlet-api:2.5")
+
+    compile("org.slf4j:slf4j-api:1.7.5")
+    compile("org.slf4j:jcl-over-slf4j:1.7.5")
+    compile("org.slf4j:slf4j-log4j12:1.7.5")
+    compile("log4j:log4j:1.2.15")
+}
+apply plugin: "war"
+war {
+    baseName = 'DemoGradle'
+    version = '1.0.0-BUILD-SNAPSHOT'
+}
+
+
